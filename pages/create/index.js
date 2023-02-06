@@ -495,7 +495,7 @@ function Index() {
               ></textarea>
             </div>
             <div className="create-preview">
-              <ReactMarkdown children={text} remarkPlugins={remarkGfm} />
+              <ReactMarkdown remarkPlugins={remarkGfm}>{text}</ReactMarkdown>
             </div>
           </div>
           <div className="create-board-info-wrapper">
