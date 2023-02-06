@@ -30,7 +30,7 @@ import Navbar from "../../components/bricks/navbar/Navbar";
 import Footer from "../../components/bricks/footer/Footer";
 import Link from "next/link";
 
-function index() {
+function Index() {
   const connection = new Connection(clusterApiUrl("devnet"));
   const metaplex = new Metaplex(connection);
   const wallet = useWallet();

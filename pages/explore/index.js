@@ -4,7 +4,7 @@ import Navbar from "../../components/bricks/navbar/Navbar";
 import Footer from "../../components/bricks/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-export default function index() {
+export default function Index() {
   return (
     <div className="explore">
       <Navbar id={2} />
