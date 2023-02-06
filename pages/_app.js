@@ -22,6 +22,7 @@ import "../styles/globals.css";
 import "../styles/adapter.css";
 
 import "../styles/home.css";
+import "../styles/explore.css";
 
 const App = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
