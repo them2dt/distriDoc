@@ -12,7 +12,7 @@ import {
   faBackward,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function index() {
+export default function Index() {
   const [file, setFile] = useState("");
   const [darkMode, setDarkMode] = useState(true);
 
