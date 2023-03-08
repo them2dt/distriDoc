@@ -44,10 +44,7 @@
     --violet: #b600ee;
     --obsidian: #242424;
     --obsidian-dark: #1b1b1b;
-    --obsidian-dark-faded: rgba(27, 27, 27, 0.5);
-    --bitcoin: #ff8b1f;
-    --ethereum: #a38fff;
-    --solana: #50ffcb;
+    --obsidian-dark-faded: #1b1b1b80;
 }
 
 body {
@@ -66,6 +63,19 @@ a {
 
 button {
     cursor: pointer;
+}
+
+code {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "regular";
+    font-size: 12px;
+    background-color: var(--white-faded);
+    color: rgb(255, 80, 80);
 }
 
 .marked {

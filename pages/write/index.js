@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Fragment } from "react";
 import { useState } from "react";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 //Web3
 import { walletAdapterIdentity } from "@metaplex-foundation/js";
@@ -26,9 +27,8 @@ import { useSnackbar } from "notistack";
 import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 //local-components
-import Navbar from "../../components/bricks/navbar/Navbar";
-import Footer from "../../components/bricks/footer/Footer";
-import Link from "next/link";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function Index() {
   const connection = new Connection(clusterApiUrl("devnet"));
@@ -746,7 +746,6 @@ function Index() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

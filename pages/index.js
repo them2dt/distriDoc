@@ -1,11 +1,6 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/Link";
 import Navbar from "@/components/Navbar";
-import texture from "../assets/media/texture.png";
-import banner_graphic from "../assets/media/banner-graphic.svg";
-import bitcoin_graphic from "../assets/media/bitcoin-graphic.svg";
-import solana_graphic from "../assets/media/solana-graphic.svg";
-import ether_graphic from "../assets/media/ether-graphic.svg";
 
 export default function index() {
   return (
@@ -29,25 +24,25 @@ export default function index() {
             <div className="home-topic-background"></div>
 
             <div className="home-topic-title">Read</div>
-            <a href="/read">
+            <Link href="/read">
               <button className="home-banner-button">Start</button>
-            </a>
+            </Link>
           </div>
           <div className="home-topic home-topic-ethereum">
             <div className="home-topic-background"></div>
 
             <div className="home-topic-title">Write</div>
-            <a href="/write">
+            <Link href="/write">
               <button className="home-banner-button">Start</button>
-            </a>
+            </Link>
           </div>
           <div className="home-topic home-topic-solana">
             <div className="home-topic-background"></div>
 
             <div className="home-topic-title">Shop</div>
-            <a href="/shop">
+            <Link href="/shop">
               <button className="home-banner-button">Start</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
