@@ -64,7 +64,7 @@ export default function Index() {
       <div className="reader">
         <div className="reader-content">
           <div className="reader-post">
-            <ReactMarkdown children={file} remarkPlugins={[remarkGfm]} />
+            <ReactMarkdown remarkPlugins={<remarkGfm />}>{file}</ReactMarkdown>
           </div>
         </div>
       </div>
