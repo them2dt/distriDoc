@@ -1,0 +1,97 @@
+.reader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--white);
+}
+
+.reader-info-container {
+    position: fixed;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.reader-info {
+    position: relative;
+    width: calc(60vw + 40px);
+    height: 15vh;
+    background-color: var(--obsidian-dark-faded);
+    font-family: "Inter Tight SemiBold";
+    color: var(--white);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 2px 5px var(--black);
+}
+
+.reader-info-primary {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.reader-title {
+    font-size: 45px;
+}
+
+.reader-content {
+    width: 60vw;
+    margin-top: 20vh;
+}
+
+.reader-post {
+    font-family: "Inter Tight SemiBold";
+}
+
+.reader-post h1,
+.reader-post h2,
+.reader-post h3,
+.reader-post h4 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 28px;
+}
+
+.reader-post p,
+.reader-post ul,
+.reader-post code {
+    font-family: "Inter Tight Regular";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.reader-post img {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60vw;
+    box-sizing: border-box;
+}
+
+.reader-post hr {
+    display: none;
+}
+
+code {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: "regular";
+    font-size: 12px;
+    background-color: var(--white-faded);
+    color: rgb(255, 80, 80);
+}

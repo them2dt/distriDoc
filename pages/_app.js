@@ -22,8 +22,9 @@ import "../styles/globals.css";
 import "../styles/adapter.css";
 
 import "../styles/home.css";
-import "../styles/explore.css";
-import "../styles/create.css";
+import "../styles/shop.css";
+import "../styles/write.css";
+import "../styles/read.css";
 
 const App = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
@@ -75,7 +76,7 @@ const App = ({ Component, pageProps }) => {
             <title>emptea library</title>
             <meta name="description" content="Building a better tomorrow." />
           </Head>
-          <StyledSnackbarProvider   autoHideDuration={10000}>
+          <StyledSnackbarProvider autoHideDuration={10000}>
             <Component {...pageProps} />
           </StyledSnackbarProvider>
         </WalletModalProvider>

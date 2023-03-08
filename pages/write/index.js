@@ -354,10 +354,7 @@ function Index() {
     "Novels",
     "Romantic",
   ];
-
-  //components
   //functions
-
   function checkImage() {
     const fileInput = document.getElementById("file-input-cover");
     if (fileInput.files.length > 0) {
@@ -374,25 +371,16 @@ function Index() {
         img.onload = function () {
           const w = this.width;
           const h = this.height;
-          console.log(w);
-          console.log(h);
-          if (w > 100 && h > 100) {
-            if (w - h == 0) {
-              setFormat(true);
-            } else setFormat(false);
-
-            if (w <= 2000 && h <= 2000) {
-              setCover(fileInput.files);
-              setCoverPreview([reader.result]);
-              setSize(true);
-            } else setSize(false);
-          }
+          if (w - h == 0) {
+            setFormat(true);
+            setCover(fileInput.files);
+            setCoverPreview([reader.result]);
+          } else setFormat(false);
         };
       };
       reader.readAsDataURL(fileInput.files.item(0));
     }
   }
-
   async function uploadText() {
     try {
       const client = new NFTStorage({
@@ -457,7 +445,6 @@ function Index() {
       console.log(e.toString());
     }
   }
-
   async function mint() {
     if (wallet.connected) {
       enqueueSnackbar("Creating...");
@@ -465,14 +452,18 @@ function Index() {
       const cover = await uploadCover();
       const metadata = await uploadMetadata({ cover, text });
       try {
-        await metaplex.nfts().create({
-          uri: metadata,
-          name: title,
-          symbol: "BOOK",
-          sellerFeeBasisPoints: 500,
-        });
+        await metaplex.nfts().create(
+          {
+            uri: metadata,
+            name: title,
+            symbol: "BOOK",
+            sellerFeeBasisPoints: 500,
+          },
+          { commitment: "finalized" }
+        );
         enqueueSnackbar("Done! Check your wallet.");
       } catch (e) {
+        console.log(e.toString());
         enqueueSnackbar(e.toString());
       }
     }
@@ -686,14 +677,6 @@ function Index() {
                 Cover-format: 1 x 1
               </div>
               <div className="create-controller-checklist-checkpoint">
-                {size == true ? (
-                  <FontAwesomeIcon icon={faCircleCheck} className="checked" />
-                ) : (
-                  <FontAwesomeIcon icon={faCircleXmark} className="unchecked" />
-                )}
-                Cover-size: 2000 x 2000
-              </div>
-              <div className="create-controller-checklist-checkpoint">
                 {text ? (
                   <FontAwesomeIcon icon={faCircleCheck} className="checked" />
                 ) : (
@@ -743,7 +726,6 @@ function Index() {
               category &&
               cover &&
               text &&
-              size &&
               type &&
               format &&
               coverPreview &&

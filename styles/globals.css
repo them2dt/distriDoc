@@ -18,52 +18,45 @@
     src: url("./fonts/InterTight-SemiBold.ttf");
 }
 
-
-/* width */
-
 ::-webkit-scrollbar {
     width: 0px;
     display: none;
 }
 
-
-/* Track */
-
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     display: none;
 }
 
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     display: none;
 }
 
-
-/* Handle on hover */
-
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
 :root {
-    --white-faded: rgba(255, 255, 255, 0.2);
-    --black-faded: rgba(0, 0, 0, 0.2);
-    --white: #ffffff;
     --black: #000000;
-    --sign: #dbc16c;
-    /*#dbc16c*/
-    scroll-behavior: smooth;
-    background-color: var(--black);
+    --white: #ffffff;
+    --black-faded: rgba(0, 0, 0, 0.2);
+    --white-faded: rgba(255, 255, 255, 0.2);
+    --transparent: #00000000;
+    --violet: #b600ee;
+    --obsidian: #242424;
+    --obsidian-dark: #1b1b1b;
+    --obsidian-dark-faded: rgba(27, 27, 27, 0.5);
+    --bitcoin: #ff8b1f;
+    --ethereum: #a38fff;
+    --solana: #50ffcb;
 }
 
 body {
+    width: 100vw;
+    max-width: 100vw;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--obsidian);
 }
 
 a {
@@ -76,33 +69,17 @@ button {
 }
 
 .marked {
-    color: var(--sign);
+    color: var(--violet);
 }
 
-.vertical-splitter div {
-    border: 1px solid var(--white-faded);
-    height: 80px;
-    margin: 20px;
-}
-
-.LazyLoad {
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
-
-.is-visible {
-    opacity: 1;
-}
-
-@media only screen and (max-width: 768px) {
-    .vertical-splitter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .vertical-splitter div {
-        border: 1px solid var(--white-faded);
-        width: 80vw;
-        height: 0vh;
-    }
+.texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background: url("../assets/media/texture.png");
+    opacity: 0.5;
+    pointer-events: none;
 }

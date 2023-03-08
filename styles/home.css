@@ -1,62 +1,135 @@
-.home-header {
-    width: 100%;
-    height: 100vh;
+.home {
+    margin-top: 15vh;
+}
+
+.home-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.home-header-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.home-banner-content {
+    position: relative;
+    width: calc(100vw - 160px);
+    height: 50vh;
+    margin-bottom: 20px;
+    background: radial-gradient(var(--violet), var(--violet), var(--white));
+    border-radius: 20px;
 }
 
-.home-header-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.home-banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 160px);
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.home-banner-text {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    text-align: left;
+    color: white;
+}
+
+.home-banner-title {
     font-family: "Inter Tight SemiBold";
     font-size: 45px;
 }
 
-.home-header-button {
-    text-align: center;
+.home-banner-subtext {
+    font-family: "Inter Tight Regular";
+    font-size: 24px;
 }
 
-.home-header-button button {
-    background-color: var(--sign);
-    color: var(--black);
-    border: none;
-    cursor: pointer;
-    font-family: "Inter Tight SemiBold";
-    font-size: 18px;
-    min-width: 200px;
-    border-radius: 4px;
-    margin: 20px;
-    padding: 20px;
-}
-
-.home-header-button button:hover {
+.home-banner-button {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: var(--black);
-    color: var(--sign);
+    border: 0px solid var(--black);
+    border-radius: 10px;
+    font-family: "Inter Tight SemiBold";
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.home-banner-button:hover {
+    background-color: var(--white);
+    color: var(--black);
     transition-duration: 0.2s;
 }
 
-.home-header-button button:not(:hover) {
+.home-banner-button:not(:hover) {
     transition-duration: 0.2s;
 }
 
-@media only screen and (max-width: 768px) {
-    .home-header-logo {
-        display: block;
-        text-align: center;
-    }
-    .home-header-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.home-banner-button:active {
+    color: var(--violet);
+}
+
+.home-topics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.home-topics:first-child {
+    margin-left: 0px;
+}
+
+.home-topics:last-child {
+    margin-right: 0px;
+}
+
+.home-topic {
+    position: relative;
+    width: calc(((100vw - 200px) / 3));
+    height: 30vh;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--violet);
+    border-radius: 20px;
+    color: var(--white);
+}
+
+.home-topic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(((100vw - 280px) / 3));
+    height: 30vh;
+    border-radius: 20px;
+}
+
+.home-topic-bitcoin {
+    background: radial-gradient(#5aecf7, #5aecf7, var(--white));
+}
+
+.home-topic-ethereum {
+    background: radial-gradient(#ff63dd, #ff63dd, var(--white));
+}
+
+.home-topic-solana {
+    background: radial-gradient(#8cff5e, #8cff5e, var(--white));
+}
+
+.home-topic-title {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-family: "Inter Tight SemiBold";
+    font-size: 36px;
 }
