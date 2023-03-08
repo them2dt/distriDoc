@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Navbar from "../../components/bricks/navbar/Navbar";
-import Footer from "../../components/bricks/footer/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 export default function Index() {
