@@ -56,7 +56,7 @@ export default function Index() {
           </div>
         </div>
       )}
-
+      {!name && <div className="loader">loading...</div>}
       <Navbar />
     </>
   );
