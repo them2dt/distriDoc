@@ -24,7 +24,7 @@ export default function index() {
             <div className="home-topic-background"></div>
 
             <div className="home-topic-title">Read</div>
-            <Link href="/read">
+            <Link href="/my-collection">
               <button className="home-banner-button">Start</button>
             </Link>
           </div>

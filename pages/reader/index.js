@@ -5,12 +5,7 @@ import ReactMarkdown from "react-markdown";
 import Switch from "@mui/material/Switch";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faThumbsUp,
-  faThumbsDown,
-  faArrowLeft,
-  faBackward,
-} from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Index() {
   const [file, setFile] = useState("");

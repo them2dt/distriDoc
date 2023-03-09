@@ -1,0 +1,18 @@
+.my-collection {
+    margin-top: 30vh;
+}
+
+.my-collection-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.my-collection-title {
+    width: 60vw;
+    font-family: "Inter Tight SemiBold";
+    font-size: 45px;
+    color: var(--white);
+    border-bottom: 5px solid var(--white-faded);
+}

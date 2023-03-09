@@ -28,7 +28,6 @@ import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 //local-components
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 
 function Index() {
   const connection = new Connection(clusterApiUrl("devnet"));
