@@ -16,3 +16,24 @@
     color: var(--white);
     border-bottom: 5px solid var(--white-faded);
 }
+
+.my-collection-filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.my-collection-filter {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 60vw;
+    background-color: var(--white-faded);
+}
+
+.my-collection-filter-sorter {
+    background-color: aliceblue;
+}
