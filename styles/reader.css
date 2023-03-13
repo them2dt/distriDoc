@@ -1,17 +1,15 @@
 .reader {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin: 0;
+    margin-top: 20px;
     padding: 0;
     width: 100%;
-    min-height: 100vh;
     color: var(--white);
 }
 
 .reader-info-container {
-    position: fixed;
-    top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +20,7 @@
     position: relative;
     width: calc(60vw + 40px);
     height: 15vh;
+    margin-top: calc(15vh + 20px);
     background-color: var(--obsidian-dark-faded);
     font-family: "Inter Tight SemiBold";
     color: var(--white);
@@ -54,8 +53,7 @@
 }
 
 .reader-content {
-    width: 60vw;
-    margin-top: 20vh;
+    width: calc(60vw + 20px);
 }
 
 .reader-post {

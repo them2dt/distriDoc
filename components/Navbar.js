@@ -1,5 +1,6 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 const WalletMultiButtonDynamic = dynamic(
   async () =>
@@ -9,7 +10,12 @@ const WalletMultiButtonDynamic = dynamic(
 
 export default function Navbar({ id }) {
   return (
-    <div className="navbar">
+    <motion.div
+      className="navbar"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.2, delay: 0 }}
+    >
       <div className="navbar-left">
         <Link href="/">
           emptea <span className="marked">library</span>
@@ -18,7 +24,10 @@ export default function Navbar({ id }) {
       <div className="navbar-center">
         <ul className="navbar-list">
           <li className="navbar-list-item">
-            <Link href="/read" style={id == 1 ? { color: "var(--sign)" } : {}}>
+            <Link
+              href="/my-collection"
+              style={id == 1 ? { color: "var(--sign)" } : {}}
+            >
               read
             </Link>
           </li>
@@ -27,16 +36,11 @@ export default function Navbar({ id }) {
               write
             </Link>
           </li>
-          <li className="navbar-list-item">
-            <Link href="/shop" style={id == 3 ? { color: "var(--sign)" } : {}}>
-              shop
-            </Link>
-          </li>
         </ul>
       </div>
       <div className="navbar-right">
         <WalletMultiButtonDynamic />
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -28,13 +28,13 @@ import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 //local-components
 import Navbar from "../../components/Navbar";
+import { useConnection } from "@solana/wallet-adapter-react";
 
 function Index() {
-  const connection = new Connection(clusterApiUrl("devnet"));
+  const connection = useConnection().connection;
   const metaplex = new Metaplex(connection);
   const wallet = useWallet();
   metaplex.use(walletAdapterIdentity(wallet));
-  const [size, setSize] = useState(false);
   const [type, setType] = useState(false);
   const [format, setFormat] = useState(false);
   const [coverPreview, setCoverPreview] = useState(null);
@@ -45,10 +45,6 @@ function Index() {
   const [title, setTitle] = useState(null);
   const [cover, setCover] = useState(null);
   const [text, setText] = useState(null);
-
-  const [textLink, setTextLink] = useState("");
-  const [coverLink, setCoverLink] = useState("");
-  const [metadataLink, setMetadataLink] = useState("");
 
   const { enqueueSnackbar } = useSnackbar();
 
@@ -387,8 +383,8 @@ function Index() {
       });
       const blob = new Blob([text], { type: "text/markdown" });
       const cid = await client.storeBlob(blob);
-      console.log("Text: https://" + cid + ".ipfs.nftstorage.link");
-      return "https://" + cid + ".ipfs.nftstorage.link";
+      console.log("Text: https://ipfs.io/ipfs/" + cid);
+      return "https://ipfs.io/ipfs/" + cid;
     } catch (e) {
       enqueueSnackbar(e.toString());
     }
@@ -403,10 +399,8 @@ function Index() {
         console.log(cover);
         const client = new NFTStorage({ token });
         const cid = await client.storeDirectory(cover);
-        console.log(
-          "Cover: https://" + cid + ".ipfs.nftstorage.link" + cover[0].name
-        );
-        return "https://" + cid + ".ipfs.nftstorage.link/" + cover[0].name;
+        console.log("Cover: https://ipfs.io/ipfs/" + cid + "/" + cover[0].name);
+        return "https://ipfs.io/ipfs/" + cid + "/" + cover[0].name;
       }
     } catch (e) {
       enqueueSnackbar(e.toString());
@@ -438,8 +432,8 @@ function Index() {
       const json = JSON.stringify(object);
       const blob = new Blob([json], { type: "text/json" });
       const cid = await client.storeBlob(blob);
-      console.log("Metadata: https://" + cid + ".ipfs.nftstorage.link");
-      return "https://" + cid + ".ipfs.nftstorage.link";
+      console.log("Metadata: https://ipfs.io/ipfs/" + cid);
+      return "https://ipfs.io/ipfs/" + cid;
     } catch (e) {
       console.log(e.toString());
     }
@@ -465,6 +459,8 @@ function Index() {
         console.log(e.toString());
         enqueueSnackbar(e.toString());
       }
+    } else {
+      enqueueSnackbar("connect with your wallet.");
     }
   }
 
@@ -516,11 +512,10 @@ function Index() {
                       className="create-cover-input-button"
                     >
                       {coverPreview ? (
-                        <img src={coverPreview} />
+                        <img src={coverPreview} alt="preview" />
                       ) : (
                         <div>
-                          Click to add your cover. (Square format, max. 1500px
-                          x1500px)
+                          Click to add your cover. (Square format recommended)
                         </div>
                       )}
                     </button>
@@ -543,9 +538,6 @@ function Index() {
                         setTitle(e.target.value);
                       }}
                     />
-                  </div>
-                  <div className="create-author">
-                    <p>@johndoe</p>
                   </div>
                   <div className="create-description">
                     <textarea

@@ -10,7 +10,7 @@
 }
 
 .my-collection-title {
-    width: 60vw;
+    width: calc(60vw - 20px);
     font-family: "Inter Tight SemiBold";
     font-size: 45px;
     color: var(--white);
@@ -23,17 +23,93 @@
     justify-content: center;
     width: 100vw;
     margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 
 .my-collection-filter {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: right;
     width: 60vw;
-    background-color: var(--white-faded);
 }
 
-.my-collection-filter-sorter {
-    background-color: aliceblue;
+.my-collection-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.my-collection-items-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 60vw;
+}
+
+.my-collection-item {
+    position: relative;
+    width: calc(20vw - 20px);
+    min-height: calc(30vw);
+    margin: 10px;
+    background-color: var(--white-faded);
+    border-radius: 10px;
+}
+
+.my-collection-item-cover {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.my-collection-item-cover img {
+    width: calc(20vw - 40px);
+    height: calc(20vw - 40px);
+}
+
+.my-collection-item-details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+.my-collection-item-name {
+    font-family: "Inter Tight SemiBold";
+    font-size: 24px;
+    color: var(--white);
+}
+
+.my-collection-item-creator {
+    font-family: "Inter Tight Regular";
+    font-size: 14px;
+    color: var(--white);
+}
+
+.my-collection-item-buy-button button {
+    width: calc(20vw - 40px);
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--violet);
+    border: 0px solid black;
+    border-radius: 10px;
+    font-family: "Inter Tight SemiBold";
+    font-size: 18px;
+    color: var(--white);
+}
+
+.my-collection-item-read-button button {
+    width: calc(20vw - 40px);
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    border: 0px solid black;
+    border-radius: 10px;
+    font-family: "Inter Tight SemiBold";
+    font-size: 18px;
+    color: var(--black);
 }
