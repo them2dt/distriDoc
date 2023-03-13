@@ -20,7 +20,6 @@ import { SnackbarProvider } from "notistack";
 import { styled } from "@mui/material";
 
 import "../styles/navbar.css";
-import "../styles/navbar-mobile.css";
 import "../styles/footer.css";
 import "../styles/globals.css";
 import "../styles/adapter.css";
@@ -31,14 +30,18 @@ import "../styles/write.css";
 import "../styles/my-collection.css";
 import "../styles/reader.css";
 
-import "../styles/home-mobile.css";
+import "../styles/navbar-mobile.css";
+import "../styles/navbar-mobile.css";
+import "../styles/my-collection-mobile.css";
+import "../styles/reader-mobile.css";
 
 const App = ({ Component, pageProps }) => {
   // Can be set to 'devnet', 'testnet', or 'mainnet-beta'
   const network = WalletAdapterNetwork.Mainnet;
 
   // You can also provide a custom RPC endpoint
-  const endpoint = "https://rpc.helius.xyz/?api-key=256baa19-0d74-4b32-a403-bbf83037df6a";
+  const endpoint =
+    "https://rpc.helius.xyz/?api-key=256baa19-0d74-4b32-a403-bbf83037df6a";
 
   const wallets = useMemo(
     () => [

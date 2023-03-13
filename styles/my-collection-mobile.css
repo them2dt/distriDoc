@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     .my-collection {
         margin-top: 30vh;
     }
@@ -9,9 +9,9 @@
         width: 100vw;
     }
     .my-collection-title {
-        width: calc(60vw - 20px);
+        width: calc(90vw - 20px);
         font-family: "Inter Tight SemiBold";
-        font-size: 45px;
+        font-size: 24px;
         color: var(--white);
         border-bottom: 5px solid var(--white-faded);
     }
@@ -40,16 +40,17 @@
     }
     .my-collection-items-grid {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
         align-items: flex-start;
         justify-content: left;
-        width: 60vw;
+        width: calc(90vw - 20px);
     }
     .my-collection-item {
         position: relative;
-        width: calc(20vw - 20px);
-        min-height: calc(25vw);
-        margin: 10px;
+        width: calc(90vw - 20px);
+        min-height: calc(50vh);
+        margin-top: 5px;
+        margin-bottom: 5px;
         background-color: var(--white-faded);
         border-radius: 10px;
     }
@@ -59,8 +60,8 @@
         left: 10px;
     }
     .my-collection-item-cover img {
-        width: calc(20vw - 40px);
-        height: calc(20vw - 40px);
+        width: calc(90vw - 40px);
+        height: calc(90vw - 40px);
         border-radius: 5px;
     }
     .my-collection-item-details {
@@ -71,7 +72,7 @@
     }
     .my-collection-item-name {
         font-family: "Inter Tight SemiBold";
-        font-size: 24px;
+        font-size: 18px;
         color: var(--white);
     }
     .my-collection-item-creator {
@@ -80,7 +81,7 @@
         color: var(--white);
     }
     .my-collection-item-buy-button button {
-        width: calc(20vw - 40px);
+        width: calc(90vw - 40px);
         margin-top: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -92,7 +93,7 @@
         color: var(--white);
     }
     .my-collection-item-read-button button {
-        width: calc(20vw - 40px);
+        width: calc(90vw - 40px);
         margin-top: 10px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -102,5 +103,13 @@
         font-family: "Inter Tight SemiBold";
         font-size: 18px;
         color: var(--black);
+    }
+    .my-collection-item-read-button button:hover {
+        background-color: var(--black);
+        color: var(--white);
+        transition-duration: 0.2s;
+    }
+    .my-collection-item-read-button button:not(:hover) {
+        transition-duration: 0.2s;
     }
 }
