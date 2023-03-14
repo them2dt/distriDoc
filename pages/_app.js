@@ -79,19 +79,26 @@ const App = ({ Component, pageProps }) => {
     }
   `;
   return (
-    <ConnectionProvider endpoint={endpoint}>
-      <WalletProvider wallets={wallets} autoConnect>
-        <WalletModalProvider>
-          <Head>
-            <title>emptea library</title>
-            <meta name="description" content="Building a better tomorrow." />
-          </Head>
-          <StyledSnackbarProvider autoHideDuration={10000}>
-            <Component {...pageProps} />
-          </StyledSnackbarProvider>
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
+    <>
+      <Head>
+        <title>emptea library</title>
+        <meta name="title" content="emptea library" />
+        <meta name="description" content="The next generation of publishing." />
+        <meta property="og:title" content="emptea library" />
+        <meta property="og:description" content="The next generation of publishing." />
+        <meta property="og:image" content="https://bafkreigj676jogw2kgxmnsbmja3akpiddccauzkqpy2ua366v64za6yzxi.ipfs.nftstorage.link/" />
+        <meta property="og:url" content="library.emptea.xyz" />
+      </Head>
+      <ConnectionProvider endpoint={endpoint}>
+        <WalletProvider wallets={wallets} autoConnect>
+          <WalletModalProvider>
+            <StyledSnackbarProvider autoHideDuration={10000}>
+              <Component {...pageProps} />
+            </StyledSnackbarProvider>
+          </WalletModalProvider>
+        </WalletProvider>
+      </ConnectionProvider>
+    </>
   );
 };
 
