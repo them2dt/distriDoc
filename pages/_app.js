@@ -30,7 +30,7 @@ import "../styles/write.css";
 import "../styles/my-collection.css";
 import "../styles/reader.css";
 
-import "../styles/navbar-mobile.css";
+import "../styles/home-mobile.css";
 import "../styles/navbar-mobile.css";
 import "../styles/my-collection-mobile.css";
 import "../styles/reader-mobile.css";
@@ -84,10 +84,6 @@ const App = ({ Component, pageProps }) => {
         <title>emptea library</title>
         <meta name="title" content="emptea library" />
         <meta name="description" content="The next generation of publishing." />
-        <meta property="og:title" content="emptea library" />
-        <meta property="og:description" content="The next generation of publishing." />
-        <meta property="og:image" content="https://bafkreigj676jogw2kgxmnsbmja3akpiddccauzkqpy2ua366v64za6yzxi.ipfs.nftstorage.link/" />
-        <meta property="og:url" content="library.emptea.xyz" />
       </Head>
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
