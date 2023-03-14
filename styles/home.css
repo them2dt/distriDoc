@@ -13,7 +13,7 @@
     .home-banner-content {
         position: relative;
         width: calc(100vw - 160px);
-        height: 50vh;
+        height: 40vh;
         margin-bottom: 20px;
         background: radial-gradient(var(--violet), var(--violet), var(--white));
         border-radius: 20px;
@@ -23,7 +23,7 @@
         top: 0;
         left: 0;
         width: calc(100vw - 160px);
-        height: 50vh;
+        height: 40vh;
         border-radius: 20px;
     }
     .home-banner-text {

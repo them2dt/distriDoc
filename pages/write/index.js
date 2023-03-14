@@ -67,7 +67,7 @@ function Index() {
     font-size: 0.875rem;
     box-sizing: border-box;
     min-height: calc(1.5em + 22px);
-    min-width: 320px;
+    min-width: calc(20vw - 60px);
 
     padding: 12px;
     border-radius: 12px;
@@ -103,7 +103,7 @@ function Index() {
     box-sizing: border-box;
     padding: 6px;
     margin: 12px 0;
-    min-width: 320px;
+    min-width: calc(20vw - 60px);
     max-height: 300px;
     border-radius: 12px;
     overflow: auto;

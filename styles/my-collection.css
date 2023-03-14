@@ -1,6 +1,6 @@
 @media only screen and (min-width: 768px) {
     .my-collection {
-        margin-top: 30vh;
+        margin-top: 20vh;
     }
     .my-collection-title-container {
         display: flex;
@@ -48,7 +48,7 @@
     .my-collection-item {
         position: relative;
         width: calc(20vw - 20px);
-        min-height: calc(25vw);
+        min-height: calc(30vw);
         margin: 10px;
         background-color: var(--white-faded);
         border-radius: 10px;
