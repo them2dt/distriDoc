@@ -343,8 +343,6 @@ export default function Index() {
     if (wallet.connected) {
       fetchDomain();
       fetchNFTs();
-    } else {
-      wallet.connect();
     }
   }, [wallet.connected]);
 
@@ -353,10 +351,7 @@ export default function Index() {
       {name && nfts && (
         <div className="my-collection">
           <div className="my-collection-title-container">
-            <div className="my-collection-title">
-              {name}
-              {"'"}s collection
-            </div>
+            <div className="my-collection-title">My collection</div>
           </div>
           {/* <div className="my-collection-filter-container">
             <div className="my-collection-filter">
