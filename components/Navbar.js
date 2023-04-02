@@ -22,21 +22,6 @@ export default function Navbar({ id }) {
         </Link>
       </div>
       <div className="navbar-center">
-        <ul className="navbar-list">
-          <li className="navbar-list-item">
-            <Link
-              href="/my-collection"
-              style={id == 1 ? { color: "var(--sign)" } : {}}
-            >
-              read
-            </Link>
-          </li>
-          <li className="navbar-list-item">
-            <Link href="/write" style={id == 2 ? { color: "var(--sign)" } : {}}>
-              write
-            </Link>
-          </li>
-        </ul>
       </div>
       <div className="navbar-right">
         <WalletMultiButtonDynamic />
