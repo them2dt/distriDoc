@@ -1,0 +1,51 @@
+.navigation {
+  width: 335px;
+  height: 80px;
+
+  position: fixed;
+  bottom: 20px;
+  left: calc(50% - 177.5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  padding: 10px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.navigation-button {
+  width: 80px;
+  height: 80px;
+
+  margin-left: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  
+  box-shadow: inset 0px -2px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 4px rgba(255, 255, 255, 0.25);
+
+}
+
+.navigation-button svg {
+  height: 40px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navigation-button.logo {
+  margin-left: 0;
+
+  background-image: url("../media/logo.png");
+  background-size: cover; /*background fills the shape*/
+  border-radius: 5px;
+
+  box-shadow: none;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
