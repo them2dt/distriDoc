@@ -1,48 +1,39 @@
 @font-face {
   font-family: "cover";
   src: url("./fonts/Satoshi-Black.otf");
-  font-size: 96px;
-  letter-spacing: -5%;
+
 }
 @font-face {
   font-family: "title";
   src: url("./fonts/Satoshi-Black.otf");
-  font-size: 48px;
-  letter-spacing: -5%;
+
 }
 
 @font-face {
   font-family: "header-1";
   src: url("./fonts/Satoshi-Medium.otf");
-  font-size: 36px;
-  letter-spacing: -5%;
+
 }
 @font-face {
   font-family: "header-2";
   src: url("./fonts/Satoshi-Medium.otf");
-  font-size: 28px;
-  letter-spacing: -5%;
+
 }
 
 @font-face {
   font-family: "header-3";
   src: url("./fonts/Satoshi-Medium.otf");
-  font-size: 24px;
-  letter-spacing: -5%;
+
 }
 
 @font-face {
   font-family: "header-4";
   src: url("./fonts/Satoshi-Medium.otf");
-  font-size: 18px;
-  letter-spacing: -5%;
 }
 
 @font-face {
   font-family: "text";
   src: url("./fonts/Satoshi-Regular.otf");
-  font-size: 16px;
-  letter-spacing: -5%;
 }
 
 :root {

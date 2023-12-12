@@ -1,0 +1,43 @@
+
+.button-border {
+    position: relative;
+
+    width: 240px;
+    height: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 80px;
+    transition: 0.4s ease-out;
+    overflow: hidden;
+}
+#button-border-variant-active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(at bottom, #ffa88b, var(--signature));
+    opacity: 0;
+    transition: 0.4s ease-out;
+}
+
+#button-border-variant-inactive {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(at top, #ffa88b, var(--signature));
+    opacity: 0;
+    transition: 0.4s ease-out;
+
+}
+#button-border-variant-active.active {
+    opacity: 1;
+    transition: 0.2s ease-out;
+
+}
+#button-border-variant-inactive.active {
+    opacity: 1;
+    transition: 0.2s ease-out;
+}
+

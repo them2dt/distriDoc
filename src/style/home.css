@@ -1,0 +1,7 @@
+.slogan {
+    font-family: "cover";
+}
+
+.slogan span {
+    color: var(--signature);
+}
