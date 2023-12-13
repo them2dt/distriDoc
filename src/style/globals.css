@@ -1,38 +1,17 @@
 @font-face {
-  font-family: "cover";
-  src: url("./fonts/Satoshi-Black.otf");
-
-}
-@font-face {
-  font-family: "title";
+  font-family: "satoshi-black";
   src: url("./fonts/Satoshi-Black.otf");
 
 }
 
 @font-face {
-  font-family: "header-1";
-  src: url("./fonts/Satoshi-Medium.otf");
-
-}
-@font-face {
-  font-family: "header-2";
+  font-family: "satoshi-medium";
   src: url("./fonts/Satoshi-Medium.otf");
 
 }
 
 @font-face {
-  font-family: "header-3";
-  src: url("./fonts/Satoshi-Medium.otf");
-
-}
-
-@font-face {
-  font-family: "header-4";
-  src: url("./fonts/Satoshi-Medium.otf");
-}
-
-@font-face {
-  font-family: "text";
+  font-family: "satoshi-regular";
   src: url("./fonts/Satoshi-Regular.otf");
 }
 
