@@ -1,8 +1,10 @@
 .slogan {}
 
 .slogan span {
-    color: var(--signature);
+    display: inline;
+    color: var(--black);
 }
+
 .image-shadow {
     width: 20vw;
     height: 20vw;
@@ -12,4 +14,9 @@
 
     box-shadow: inset 0px -100px 50px var(--base);
     z-index: 20;
+}
+
+.marked span {
+    display: inline;
+    color: var(--signature);
 }
