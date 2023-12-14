@@ -1,6 +1,5 @@
 import "../style/layout.css"
 import "../style/globals.css"
-import "../style/navigation.css"
 import "../style/home.css"
 
 export const metadata = {

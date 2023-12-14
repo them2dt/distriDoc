@@ -1,6 +1,15 @@
-.slogan {
-}
+.slogan {}
 
 .slogan span {
     color: var(--signature);
+}
+.image-shadow {
+    width: 20vw;
+    height: 20vw;
+    background-image: url("../media/floating-sphere.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    box-shadow: inset 0px -100px 50px var(--base);
+    z-index: 20;
 }

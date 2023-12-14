@@ -6,9 +6,10 @@
     height: 100vh;
 }
 
-.row{
-    width: 1000px;
+.row {
+    width: 50vw;
 }
+
 .row.left {
     display: flex;
     align-items: center;
@@ -49,33 +50,25 @@
 }
 
 .header-1 {
-    font-family: "satoshi-medium";
+    font-family: "satoshi-black";
     font-size: 36px;
     letter-spacing: -5%;
+
+    color: var(--signature);
 }
 
 .header-2 {
-    font-family: "satoshi-medium";
+    font-family: "satoshi-black";
     font-size: 28px;
     letter-spacing: -5%;
 }
 
-.header-3 {
-    font-family: "satoshi-medium";
-    font-size: 24px;
-    letter-spacing: -5%;
-}
-
-.header-4 {
-    font-family: "satoshi-medium";
-    font-size: 18px;
-    letter-spacing: -5%;
-}
 
 .text {
     font-family: "satoshi-regular";
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -5%;
+    white-space: pre-line;
 }
 
 .button-2 {

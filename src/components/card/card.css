@@ -1,0 +1,51 @@
+.card {
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.2);
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    overflow: hidden;
+}
+
+.card-image {
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-image img {
+    width: 75%;
+    height: 75%;
+}
+
+.card-details {
+    position: relative;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.2), inset 0px -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.card-header {
+    color: var(--signature);
+}
+
+.card-context {
+    color: rgba(0, 0, 0, 0.4);
+    width: 90%;
+}
