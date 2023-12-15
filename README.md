@@ -1,4 +1,5 @@
 # DistriDoc
-Write documents and store them as NFT's. Cheap & persistent. 
+
+A new way to publish.
 
 Built by Emptea Labs.
